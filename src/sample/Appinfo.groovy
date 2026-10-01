@@ -1,20 +1,21 @@
 package com.sample
 
-class Appinfo {
+class AppInfo {
+
     def steps
-    String name
+    String appName
     int port
     String environment
 
-    Appinfo(steps, String name, int port, String environment) {
+    AppInfo(steps, String appName, int port, String environment) {
         this.steps = steps
-        this.name = name
+        this.appName = appName
         this.port = port
         this.environment = environment
     }
 
     void printInfo() {
-        steps.echo "Application Name: ${name}"
+        steps.echo "Application Name: ${appName}"
         steps.echo "Port: ${port}"
         steps.echo "Environment: ${environment}"
     }
